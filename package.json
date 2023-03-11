@@ -6,11 +6,15 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./index.d.ds",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     }
   },
+  "files": [
+    "dist/*",
+    "README.md"
+  ],
   "repository": "https://github.com/joshwashywash/vextreme",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
