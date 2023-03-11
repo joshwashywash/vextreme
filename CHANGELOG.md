@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.1.1
+
+### Patch Changes
+
+- 36cf70c: fix package.json
+
 ## 1.1.0
 
 ### Minor Changes
