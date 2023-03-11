@@ -12,9 +12,6 @@
     }
   },
   "repository": "https://github.com/joshwashywash/vextreme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
