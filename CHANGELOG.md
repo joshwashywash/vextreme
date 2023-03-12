@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.2.0
+
+### Minor Changes
+
+- 63b9930: add first round of vector functions
+
 ## 1.1.1
 
 ### Patch Changes
