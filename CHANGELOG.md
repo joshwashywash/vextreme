@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.3.0
+
+### Minor Changes
+
+- 632262d: fixes rotate functions
+
 ## 1.2.2
 
 ### Patch Changes
