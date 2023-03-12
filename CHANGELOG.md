@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.3.1
+
+### Patch Changes
+
+- 5255600: fixes typos in the docs
+
 ## 1.3.0
 
 ### Minor Changes
