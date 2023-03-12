@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.2.2
+
+### Patch Changes
+
+- a590a33: cleanup some docs that will show in-line in ides and text editors
+
 ## 1.2.1
 
 ### Patch Changes
