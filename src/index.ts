@@ -15,7 +15,7 @@ export type Vec3 = [...Vec2, number];
  *
  * @example
  * ```ts
- * add([1, 2, 3], [6, 5, 4]) // [7, 7, 7]
+ * add([0, 1, 2], [5, 4, 3]) // [5, 5, 5]
  * ```
  */
 export const add = (a: Vec3, b: Vec3): Vec3 => [a[0] + b[0], a[1] + b[1], a[2] + b[2]];
@@ -37,14 +37,14 @@ export const angle = (a: Vec3, b: Vec3): number =>
 	Math.acos(createClamp(-1, 1)(dot(a, b) / (mag(a) * mag(b))));
 
 /**
- * Returns a function that takes scales `v` by `s`.
+ * Returns a function that takes `v` and scales it by `s`.
  *
  * You can think of negation as a scaling of -1.
  *
  * @example
  * createScale(2)([0, 1, 2]); // [0, 2, 4]
  * const negate = createScale(-1);
- * negate([0, 1, 2]); // [-1, -2, -3]
+ * negate([0, 1, 2]); // [0, -1, -2]
  */
 export const createScale =
 	(s: number) =>
@@ -193,7 +193,7 @@ export const rotateLeft = (v: Vec3): Vec3 => [v[1], v[2], v[0]];
 export const rotateRight = (v: Vec3): Vec3 => [v[2], v[0], v[1]];
 
 /**
- * Returns a `Vec2` which is just a `v` without its z-component.
+ * Returns a `Vec2` which is just `v` without its z-component.
  *
  * Useful for generating points in an SVG path or anytime you want to cast a `Vec3` to a 2D space.
  *
