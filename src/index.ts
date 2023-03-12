@@ -1,17 +1,17 @@
 import { createClamp } from "./number";
 
 /**
- * Represent a two-dimensional vector.
+ * Represents a two-dimensional vector.
  */
 export type Vec2 = [number, number];
 
 /**
- * Represent a three-dimensional vector.
+ * Represents a three-dimensional vector.
  */
 export type Vec3 = [...Vec2, number];
 
 /**
- * rotates a `Vec3` by shifting every element once to the right. Shifting the rightmost element moves it to the start.
+ * Rotates a `Vec3` by shifting every element one position to the right. Shifting the rightmost component moves it to the start.
  *
  * @example
  * ```ts
@@ -21,7 +21,7 @@ export type Vec3 = [...Vec2, number];
 export const rotateRight = (v: Vec3): Vec3 => [v[2], v[0], v[1]];
 
 /**
- * Rotates a `Vec3` by shifting every element once to the left. Shifting the leftmost element moves it to the end.
+ * Rotates a `Vec3` by shifting every element one position to the left. Shifting the leftmost component moves it to the end.
  *
  * @example
  * ```ts
@@ -30,9 +30,24 @@ export const rotateRight = (v: Vec3): Vec3 => [v[2], v[0], v[1]];
  */
 export const rotateLeft = (v: Vec3): Vec3 => [v[2], v[0], v[1]];
 
+/**
+ * The unit vector in the 'x' direction.
+ */
 export const iHat: Vec3 = [1, 0, 0];
-export const jHat: Vec3 = rotateRight(iHat);
-export const kHat: Vec3 = rotateRight(jHat);
+
+/**
+ * The unit vector in the 'y' direction.
+ */
+export const jHat: Vec3 = [0, 1, 0];
+
+/**
+ * The unit vector in the 'z' direction.
+ */
+export const kHat: Vec3 = [0, 0, 1];
+
+/**
+ * The zero vector.
+ */
 export const zero: Vec3 = [0, 0, 0];
 
 /**
