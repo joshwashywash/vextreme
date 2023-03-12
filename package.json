@@ -1,6 +1,6 @@
 {
   "name": "vextreme",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Extreme Vectors 8-)",
   "main": "./dist/index.js",
   "exports": {
