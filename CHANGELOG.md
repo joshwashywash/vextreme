@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.2.1
+
+### Patch Changes
+
+- 1dc3a51: adds docs for vector constants
+
 ## 1.2.0
 
 ### Minor Changes
