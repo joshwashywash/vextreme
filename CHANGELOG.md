@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.3.2
+
+### Patch Changes
+
+- c03998b: add doc generator
+
 ## 1.3.1
 
 ### Patch Changes
