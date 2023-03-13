@@ -1,6 +1,24 @@
 # Vextreme
 
-Simple functions for working with 3-dimensional vectors.
+Fully-typed functions for working with 3-dimensional vectors.
+
+## Get Started
+
+1. Install
+
+```
+npm install vextreme
+```
+
+2. Use the types and functions in your source code
+
+```typescript
+import { type Vec3, add } from 'vextreme';
+
+const a: Vec3 = [0, 1, 2];
+const b: Vec3 = [3, 4, 5];
+const c = add(a, b);
+```
 
 ## API
 
@@ -8,52 +26,52 @@ Simple functions for working with 3-dimensional vectors.
 
 #### Table of Contents
 
-*   [Vec2](#vec2)
-*   [Vec3](#vec3)
-*   [add](#add)
-    *   [Parameters](#parameters)
-    *   [Examples](#examples)
-*   [angle](#angle)
-    *   [Parameters](#parameters-1)
-    *   [Examples](#examples-1)
-*   [createScale](#createscale)
-    *   [Parameters](#parameters-2)
-    *   [Examples](#examples-2)
-*   [cross](#cross)
-    *   [Parameters](#parameters-3)
-    *   [Examples](#examples-3)
-*   [diff](#diff)
-    *   [Parameters](#parameters-4)
-    *   [Examples](#examples-4)
-*   [dot](#dot)
-    *   [Parameters](#parameters-5)
-    *   [Examples](#examples-5)
-*   [equal](#equal)
-    *   [Parameters](#parameters-6)
-    *   [Examples](#examples-6)
-*   [mag](#mag)
-    *   [Parameters](#parameters-7)
-    *   [Examples](#examples-7)
-*   [midpoint](#midpoint)
-    *   [Parameters](#parameters-8)
-    *   [Examples](#examples-8)
-*   [multiply](#multiply)
-    *   [Parameters](#parameters-9)
-    *   [Examples](#examples-9)
-*   [negate](#negate)
-    *   [Examples](#examples-10)
-*   [normalize](#normalize)
-    *   [Parameters](#parameters-10)
-    *   [Examples](#examples-11)
-*   [rotateLeft](#rotateleft)
-    *   [Parameters](#parameters-11)
-    *   [Examples](#examples-12)
-*   [rotateRight](#rotateright)
-    *   [Parameters](#parameters-12)
-    *   [Examples](#examples-13)
-*   [toVec2](#tovec2)
-    *   [Parameters](#parameters-13)
-    *   [Examples](#examples-14)
+- [Vec2](#vec2)
+- [Vec3](#vec3)
+- [add](#add)
+  - [Parameters](#parameters)
+  - [Examples](#examples)
+- [angle](#angle)
+  - [Parameters](#parameters-1)
+  - [Examples](#examples-1)
+- [createScale](#createscale)
+  - [Parameters](#parameters-2)
+  - [Examples](#examples-2)
+- [cross](#cross)
+  - [Parameters](#parameters-3)
+  - [Examples](#examples-3)
+- [diff](#diff)
+  - [Parameters](#parameters-4)
+  - [Examples](#examples-4)
+- [dot](#dot)
+  - [Parameters](#parameters-5)
+  - [Examples](#examples-5)
+- [equal](#equal)
+  - [Parameters](#parameters-6)
+  - [Examples](#examples-6)
+- [mag](#mag)
+  - [Parameters](#parameters-7)
+  - [Examples](#examples-7)
+- [midpoint](#midpoint)
+  - [Parameters](#parameters-8)
+  - [Examples](#examples-8)
+- [multiply](#multiply)
+  - [Parameters](#parameters-9)
+  - [Examples](#examples-9)
+- [negate](#negate)
+  - [Examples](#examples-10)
+- [normalize](#normalize)
+  - [Parameters](#parameters-10)
+  - [Examples](#examples-11)
+- [rotateLeft](#rotateleft)
+  - [Parameters](#parameters-11)
+  - [Examples](#examples-12)
+- [rotateRight](#rotateright)
+  - [Parameters](#parameters-12)
+  - [Examples](#examples-13)
+- [toVec2](#tovec2)
+  - [Parameters](#parameters-13)
+  - [Examples](#examples-14)
 
 ### Vec2
 
@@ -73,13 +91,13 @@ Component-wise addition of `a` and `b`.
 
 #### Parameters
 
-*   `a` **[Vec3](#vec3)**&#x20;
-*   `b` **[Vec3](#vec3)**&#x20;
+- `a` **[Vec3](#vec3)**&#x20;
+- `b` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
 ```javascript
-add([0, 1, 2], [5, 4, 3]) // [5, 5, 5]
+add([0, 1, 2], [5, 4, 3]); // [5, 5, 5]
 ```
 
 Returns **[Vec3](#vec3)**&#x20;
@@ -93,15 +111,15 @@ because the zero vector does not have a magnitude.
 
 #### Parameters
 
-*   `a` **[Vec3](#vec3)**&#x20;
-*   `b` **[Vec3](#vec3)**&#x20;
+- `a` **[Vec3](#vec3)**&#x20;
+- `b` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
 ```javascript
-angle([0, 1, 2], [0, 1, 2]) // 0
-angle([1, 0, 0], [0, 1, 0]) // 1.57...
-angle([0, 0, 0], [1, 0, 0]) // NaN
+angle([0, 1, 2], [0, 1, 2]); // 0
+angle([1, 0, 0], [0, 1, 0]); // 1.57...
+angle([0, 0, 0], [1, 0, 0]); // NaN
 ```
 
 Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**&#x20;
@@ -114,7 +132,7 @@ You can think of negation as a scaling of -1.
 
 #### Parameters
 
-*   `s` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**&#x20;
+- `s` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**&#x20;
 
 #### Examples
 
@@ -130,8 +148,8 @@ Calculates the cross product of `a` and `b`.
 
 #### Parameters
 
-*   `a` **[Vec3](#vec3)**&#x20;
-*   `b` **[Vec3](#vec3)**&#x20;
+- `a` **[Vec3](#vec3)**&#x20;
+- `b` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
@@ -151,8 +169,8 @@ Note that `diff(a, b)` !== `diff(b, a)`.
 
 #### Parameters
 
-*   `a` **[Vec3](#vec3)**&#x20;
-*   `b` **[Vec3](#vec3)**&#x20;
+- `a` **[Vec3](#vec3)**&#x20;
+- `b` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
@@ -170,8 +188,8 @@ Calculates the dot product of `a` and `b`.
 
 #### Parameters
 
-*   `a` **[Vec3](#vec3)**&#x20;
-*   `b` **[Vec3](#vec3)**&#x20;
+- `a` **[Vec3](#vec3)**&#x20;
+- `b` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
@@ -191,8 +209,8 @@ In other words `a[i] === b[i]` for `i` in the range `0 <= i < a.length`.
 
 #### Parameters
 
-*   `a` **[Vec3](#vec3)**&#x20;
-*   `b` **[Vec3](#vec3)**&#x20;
+- `a` **[Vec3](#vec3)**&#x20;
+- `b` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
@@ -211,7 +229,7 @@ Returns the magnitude of `v`.
 
 #### Parameters
 
-*   `v` **[Vec3](#vec3)**&#x20;
+- `v` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
@@ -232,8 +250,8 @@ If `v` is a vector from the origin to `p`, `midpoint(a, b)` is scaling of `v` by
 
 #### Parameters
 
-*   `a` **[Vec3](#vec3)**&#x20;
-*   `b` **[Vec3](#vec3)**&#x20;
+- `a` **[Vec3](#vec3)**&#x20;
+- `b` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
@@ -254,8 +272,8 @@ If you only want to scale in one or two dimensions, you can use the identity for
 
 #### Parameters
 
-*   `a` **[Vec3](#vec3)**&#x20;
-*   `b` **[Vec3](#vec3)**&#x20;
+- `a` **[Vec3](#vec3)**&#x20;
+- `b` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
@@ -284,7 +302,7 @@ Normalizes `v`.
 
 #### Parameters
 
-*   `v` **[Vec3](#vec3)**&#x20;
+- `v` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
@@ -302,7 +320,7 @@ Shifting the leftmost component moves it to the end.
 
 #### Parameters
 
-*   `v` **[Vec3](#vec3)**&#x20;
+- `v` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
@@ -319,7 +337,7 @@ Shifting the rightmost component moves it to the start.
 
 #### Parameters
 
-*   `v` **[Vec3](#vec3)**&#x20;
+- `v` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
@@ -337,12 +355,12 @@ Useful for generating points in an SVG path or anytime you want to cast a `Vec3`
 
 #### Parameters
 
-*   `v` **[Vec3](#vec3)**&#x20;
+- `v` **[Vec3](#vec3)**&#x20;
 
 #### Examples
 
 ```javascript
-toVec2([0, 1, 2]) // [0, 1]
+toVec2([0, 1, 2]); // [0, 1]
 ```
 
 Returns **[Vec2](#vec2)**&#x20;
