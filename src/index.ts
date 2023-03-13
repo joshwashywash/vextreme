@@ -39,6 +39,7 @@ export const angle = (a: Vec3, b: Vec3): number =>
  *
  * @example
  * createScale(2)([0, 1, 2]); // [0, 2, 4]
+ * 
  * const negate = createScale(-1);
  * negate([0, 1, 2]); // [0, -1, -2]
  */
@@ -64,7 +65,7 @@ export const cross = (a: Vec3, b: Vec3): Vec3 => [
 /**
  * Component-wise subtraction between `a` and `b`.
  *
- * Note that `diff(a, b)` !== `diff(b, a)`.
+ * Note that `diff(a, b)` and `diff(b, a)` are not the same.
  *
  * @example
  * diff([0, 1, 2], [0, 0, -1]); // [0, 1, 3]
@@ -73,7 +74,8 @@ export const cross = (a: Vec3, b: Vec3): Vec3 => [
  */
 export const diff = (a: Vec3, b: Vec3): Vec3 => add(a, negate(b));
 
-/** Calculates the dot product of `a` and `b`.
+/**
+ * Returns the dot product of `a` and `b`.
  *
  * @example
  * dot([1, 0, 0], [0, 1, 0]); // 0
@@ -83,9 +85,9 @@ export const diff = (a: Vec3, b: Vec3): Vec3 => add(a, negate(b));
 export const dot = (a: Vec3, b: Vec3): number => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
 
 /**
- * Returns true if `a` and `b` are equal on a component-wise level.
+ * Returns whether `a` and `b` are equal on a component-wise level.
  *
- * In other words `a[i] === b[i]` for `i` in the range `0 <= i < a.length`.
+ * In other words, `a[i] === b[i]` for `i` in the range `0 <= i < a.length`.
  *
  * @example
  * const a: Vec3 = [0, 1, 2];
@@ -100,8 +102,8 @@ export const equal = (a: Vec3, b: Vec3): boolean =>
  * Returns the magnitude of `v`.
  *
  * @example
- * mag(1, 0, 0); // 1
- * mag(0, 1, 2); // 2.23606797749979
+ * mag([1, 0, 0]); // 1
+ * mag([0, 1, 2]); // 2.23606797749979
  */
 export const mag = (v: Vec3): number => Math.hypot(...v);
 
@@ -110,8 +112,7 @@ export const mag = (v: Vec3): number => Math.hypot(...v);
  *
  * It may help to think of `a` and `b` as offsets from the origin.
  * First you move along `a` then move along `b` to get to the point `p`.
- * If `v` is a vector from the origin to `p`, `midpoint(a, b)` is scaling of `v` by 1 / 2;
- *
+ * If `v` is a vector from the origin to `p`, `midpoint(a, b)` is a scaling of `v` by 1 / 2;
  *
  * @example
  * midpoint([1, 0, 0], [0, 1, 0]); // [0.5, 0.5, 0]
@@ -122,7 +123,7 @@ export const midpoint = (a: Vec3, b: Vec3): Vec3 => createScale(1 / 2)(add(a, b)
  * Component-wise multiplication of `a` and `b`.
  *
  * You can think of `multiply` as a scaling of `a` by the vector `b`
- * where b[0] is a scaling in the x-dimension, b[1] in the y-dimension, and b[2] in the z-dimension.
+ * where `b[0]` is a scaling in the x-dimension, `b[1]` in the y-dimension, and `b[2]` in the z-dimension.
  *
  * If you only want to scale in one or two dimensions, you can use the identity for multiplication, `a * 1 = a`.
  *
@@ -134,7 +135,7 @@ export const midpoint = (a: Vec3, b: Vec3): Vec3 => createScale(1 / 2)(add(a, b)
 export const multiply = (a: Vec3, b: Vec3): Vec3 => [a[0] * b[0], a[1] * b[1], a[2] * b[2]];
 
 /**
- * Negates each component of a `Vec3`.
+ * Negates each component of `v`.
  *
  * @example
  * negate([0, 0, 0]); // [0, 0, 0]
@@ -142,7 +143,8 @@ export const multiply = (a: Vec3, b: Vec3): Vec3 => [a[0] * b[0], a[1] * b[1], a
  */
 export const negate = createScale(-1);
 
-/** Normalizes `v`.
+/**
+ * Normalizes `v`.
  *
  * @example
  * normalize([0, 1, 2]); // [0, 0.4472135954999579, 0.8944271909999159]
