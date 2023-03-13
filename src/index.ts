@@ -14,9 +14,7 @@ export type Vec3 = [...Vec2, number];
  * Component-wise addition of `a` and `b`.
  *
  * @example
- * ```typescript
  * add([0, 1, 2], [5, 4, 3]) // [5, 5, 5]
- * ```
  */
 export const add = (a: Vec3, b: Vec3): Vec3 => [a[0] + b[0], a[1] + b[1], a[2] + b[2]];
 
@@ -27,11 +25,9 @@ export const add = (a: Vec3, b: Vec3): Vec3 => [a[0] + b[0], a[1] + b[1], a[2] +
  * because the zero vector does not have a magnitude.
  *
  * @example
- * ```typescript
  * angle([0, 1, 2], [0, 1, 2]) // 0
  * angle([1, 0, 0], [0, 1, 0]) // 1.57...
  * angle([0, 0, 0], [1, 0, 0]) // NaN
- * ```
  */
 export const angle = (a: Vec3, b: Vec3): number =>
 	Math.acos(createClamp(-1, 1)(dot(a, b) / (mag(a) * mag(b))));
@@ -55,11 +51,9 @@ export const createScale =
  * Calculates the cross product of `a` and `b`.
  *
  * @example
- * ```typescript
  * cross([0, 1, 2], [3, 4, 5]); // [-3, 6, -3]
  * cross([0, 0, 0], [0, 1, 2]); // [0, 0, 0]
  * cross([1, 0, 0], [0, 1, 0]); // [0, 0, 1]
- * ```
  */
 export const cross = (a: Vec3, b: Vec3): Vec3 => [
 	a[1] * b[2] - a[2] * b[1],
@@ -82,11 +76,9 @@ export const diff = (a: Vec3, b: Vec3): Vec3 => add(a, negate(b));
 /** Calculates the dot product of `a` and `b`.
  *
  * @example
- * ```typescript
  * dot([1, 0, 0], [0, 1, 0]); // 0
  * dot([0, 0, 0], [1, 0, 0]); // 0
  * dot([1, 0, 0], [2, 0, 0]); // 2
- * ```
  */
 export const dot = (a: Vec3, b: Vec3): number => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
 
@@ -96,12 +88,10 @@ export const dot = (a: Vec3, b: Vec3): number => a[0] * b[0] + a[1] * b[1] + a[2
  * In other words `a[i] === b[i]` for `i` in the range `0 <= i < a.length`.
  *
  * @example
- * ```typescript
  * const a: Vec3 = [0, 1, 2];
  * const b: Vec3 = [0, 1, 2];
  * a === b; // false
  * equal(a, b); // true
- * ```
  */
 export const equal = (a: Vec3, b: Vec3): boolean =>
 	a.reduce((acc, v, i) => acc && v === b[i], true);
@@ -110,10 +100,8 @@ export const equal = (a: Vec3, b: Vec3): boolean =>
  * Returns the magnitude of `v`.
  *
  * @example
- * ```typescript
  * mag(1, 0, 0); // 1
  * mag(0, 1, 2); // 2.23606797749979
- * ```
  */
 export const mag = (v: Vec3): number => Math.hypot(...v);
 
@@ -126,9 +114,7 @@ export const mag = (v: Vec3): number => Math.hypot(...v);
  *
  *
  * @example
- * ```typescript
  * midpoint([1, 0, 0], [0, 1, 0]); // [0.5, 0.5, 0]
- * ```
  */
 export const midpoint = (a: Vec3, b: Vec3): Vec3 => createScale(1 / 2)(add(a, b));
 
@@ -141,11 +127,9 @@ export const midpoint = (a: Vec3, b: Vec3): Vec3 => createScale(1 / 2)(add(a, b)
  * If you only want to scale in one or two dimensions, you can use the identity for multiplication, `a * 1 = a`.
  *
  * @example
- * ```typescript
  * multiply([0, 1, 2], [3, 4, 5]); // [0, 4, 10]
  * multiply([0, 1, 2], [1, 1, 5]); // [0, 1, 10]
  * multiply([0, 1, 2], [0, 0, 0]); // [0, 0, 0]
- * ```
  */
 export const multiply = (a: Vec3, b: Vec3): Vec3 => [a[0] * b[0], a[1] * b[1], a[2] * b[2]];
 
@@ -153,20 +137,16 @@ export const multiply = (a: Vec3, b: Vec3): Vec3 => [a[0] * b[0], a[1] * b[1], a
  * Negates each component of a `Vec3`.
  *
  * @example
- * ```typescript
  * negate([0, 0, 0]); // [0, 0, 0]
  * negate([0, 1, 2]); // [0, -1, -2]
- * ```
  */
 export const negate = createScale(-1);
 
 /** Normalizes `v`.
  *
  * @example
- * ```typescript
  * normalize([0, 1, 2]); // [0, 0.4472135954999579, 0.8944271909999159]
  * normalize([1, 0, 0]); // [1, 0, 0]
- * ```
  */
 export const normalize = (v: Vec3): Vec3 => createScale(1 / mag(v))(v);
 
@@ -175,9 +155,7 @@ export const normalize = (v: Vec3): Vec3 => createScale(1 / mag(v))(v);
  * Shifting the leftmost component moves it to the end.
  *
  * @example
- * ```typescript
  * rotateLeft([0, 1, 2]); // [1, 2, 0]
- * ```
  */
 export const rotateLeft = (v: Vec3): Vec3 => [v[1], v[2], v[0]];
 
@@ -186,9 +164,7 @@ export const rotateLeft = (v: Vec3): Vec3 => [v[1], v[2], v[0]];
  * Shifting the rightmost component moves it to the start.
  *
  * @example
- * ```typescript
  * rotateRight([0, 1, 2]); // [2, 0, 1]
- * ```
  */
 export const rotateRight = (v: Vec3): Vec3 => [v[2], v[0], v[1]];
 
@@ -198,8 +174,6 @@ export const rotateRight = (v: Vec3): Vec3 => [v[2], v[0], v[1]];
  * Useful for generating points in an SVG path or anytime you want to cast a `Vec3` to a 2D space.
  *
  * @example
- *  ```typescript
  * toVec2([0, 1, 2]) // [0, 1]
- *  ```
  */
 export const toVec2 = (v: Vec3): Vec2 => [v[0], v[1]];
