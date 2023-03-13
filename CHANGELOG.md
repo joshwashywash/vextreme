@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.3.3
+
+### Patch Changes
+
+- ad7d647: removes typescript code blocks from comments
+
 ## 1.3.2
 
 ### Patch Changes
