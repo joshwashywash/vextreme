@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.3.4
+
+### Patch Changes
+
+- 7347d57: add usage docs in readme
+
 ## 1.3.3
 
 ### Patch Changes
