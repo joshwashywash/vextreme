@@ -78,11 +78,9 @@ Component-wise addition of `a` and `b`.
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 add([0, 1, 2], [5, 4, 3]) // [5, 5, 5]
 ```
-````
 
 Returns **[Vec3](#vec3)**&#x20;
 
@@ -100,13 +98,11 @@ because the zero vector does not have a magnitude.
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 angle([0, 1, 2], [0, 1, 2]) // 0
 angle([1, 0, 0], [0, 1, 0]) // 1.57...
 angle([0, 0, 0], [1, 0, 0]) // NaN
 ```
-````
 
 Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**&#x20;
 
@@ -139,13 +135,11 @@ Calculates the cross product of `a` and `b`.
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 cross([0, 1, 2], [3, 4, 5]); // [-3, 6, -3]
 cross([0, 0, 0], [0, 1, 2]); // [0, 0, 0]
 cross([1, 0, 0], [0, 1, 0]); // [0, 0, 1]
 ```
-````
 
 Returns **[Vec3](#vec3)**&#x20;
 
@@ -181,13 +175,11 @@ Calculates the dot product of `a` and `b`.
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 dot([1, 0, 0], [0, 1, 0]); // 0
 dot([0, 0, 0], [1, 0, 0]); // 0
 dot([1, 0, 0], [2, 0, 0]); // 2
 ```
-````
 
 Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**&#x20;
 
@@ -204,14 +196,12 @@ In other words `a[i] === b[i]` for `i` in the range `0 <= i < a.length`.
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 const a: Vec3 = [0, 1, 2];
 const b: Vec3 = [0, 1, 2];
 a === b; // false
 equal(a, b); // true
 ```
-````
 
 Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**&#x20;
 
@@ -225,12 +215,10 @@ Returns the magnitude of `v`.
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 mag(1, 0, 0); // 1
 mag(0, 1, 2); // 2.23606797749979
 ```
-````
 
 Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**&#x20;
 
@@ -249,11 +237,9 @@ If `v` is a vector from the origin to `p`, `midpoint(a, b)` is scaling of `v` by
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 midpoint([1, 0, 0], [0, 1, 0]); // [0.5, 0.5, 0]
 ```
-````
 
 Returns **[Vec3](#vec3)**&#x20;
 
@@ -273,13 +259,11 @@ If you only want to scale in one or two dimensions, you can use the identity for
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 multiply([0, 1, 2], [3, 4, 5]); // [0, 4, 10]
 multiply([0, 1, 2], [1, 1, 5]); // [0, 1, 10]
 multiply([0, 1, 2], [0, 0, 0]); // [0, 0, 0]
 ```
-````
 
 Returns **[Vec3](#vec3)**&#x20;
 
@@ -289,12 +273,10 @@ Negates each component of a `Vec3`.
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 negate([0, 0, 0]); // [0, 0, 0]
 negate([0, 1, 2]); // [0, -1, -2]
 ```
-````
 
 ### normalize
 
@@ -306,12 +288,10 @@ Normalizes `v`.
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 normalize([0, 1, 2]); // [0, 0.4472135954999579, 0.8944271909999159]
 normalize([1, 0, 0]); // [1, 0, 0]
 ```
-````
 
 Returns **[Vec3](#vec3)**&#x20;
 
@@ -326,11 +306,9 @@ Shifting the leftmost component moves it to the end.
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 rotateLeft([0, 1, 2]); // [1, 2, 0]
 ```
-````
 
 Returns **[Vec3](#vec3)**&#x20;
 
@@ -345,11 +323,9 @@ Shifting the rightmost component moves it to the start.
 
 #### Examples
 
-````javascript
-```ts
+```javascript
 rotateRight([0, 1, 2]); // [2, 0, 1]
 ```
-````
 
 Returns **[Vec3](#vec3)**&#x20;
 
