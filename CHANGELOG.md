@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.4.2
+
+### Patch Changes
+
+- 8e7b850: oops forgot to add license
+
 ## 1.4.1
 
 ### Patch Changes
