@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.4.3
+
+### Patch Changes
+
+- 997306f: license.md -> license
+
 ## 1.4.2
 
 ### Patch Changes
