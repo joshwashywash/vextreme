@@ -1,4 +1,5 @@
 {
+	"url": "https://josho.dev",
 	"name": "vextreme",
 	"version": "1.4.0",
 	"description": "Extreme Vectors 8-)",
@@ -11,15 +12,16 @@
 			"require": "./dist/index.js"
 		}
 	},
+	"files": [
+		"LICENSE",
+		"README.md",
+		"dist"
+	],
 	"keywords": [
 		"3d",
 		"math",
 		"matrix",
 		"vector"
-	],
-	"files": [
-		"dist",
-		"README.md"
 	],
 	"repository": "https://github.com/joshwashywash/vextreme",
 	"scripts": {
@@ -30,6 +32,7 @@
 		"release": "pnpm build && pnpm run docs && changeset publish",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
+	"types": "./index.d.ts",
 	"author": "josh oertel",
 	"license": "MIT",
 	"devDependencies": {

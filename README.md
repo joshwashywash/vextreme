@@ -1,16 +1,14 @@
 # Vextreme
 
-Fully-typed functions for working with 3-dimensional vectors.
+Type-safe functions for 3-dimensional vectors.
 
 ## Get Started
-
-1. Install
 
 ```
 npm install vextreme
 ```
 
-2. Use the types and functions in your source code
+Use the types and functions in your source code
 
 ```typescript
 import { type Vec3, add } from 'vextreme';
