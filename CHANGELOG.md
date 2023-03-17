@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.4.1
+
+### Patch Changes
+
+- 9bae8f3: turn off minifier for built code and add license file
+
 ## 1.4.0
 
 ### Minor Changes
