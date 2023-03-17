@@ -23,7 +23,7 @@
 	],
 	"repository": "https://github.com/joshwashywash/vextreme",
 	"scripts": {
-		"build": "tsup src/index.ts --format cjs,esm --dts",
+		"build": "tsup",
 		"docs": "documentation readme src/index.ts --pe ts -s \"API\"",
 		"lint": "tsc",
 		"format": "prettier src --write",

@@ -39,7 +39,7 @@ export const angle = (a: Vec3, b: Vec3): number =>
  *
  * @example
  * createScale(2)([0, 1, 2]); // [0, 2, 4]
- * 
+ *
  * const negate = createScale(-1);
  * negate([0, 1, 2]); // [0, -1, -2]
  */
