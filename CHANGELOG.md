@@ -1,5 +1,11 @@
 # vextreme
 
+## 1.4.0
+
+### Minor Changes
+
+- d4fb948: output library is now minimized
+
 ## 1.3.5
 
 ### Patch Changes
