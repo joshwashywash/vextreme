@@ -1,7 +1,7 @@
 # Vextreme
 
 > **Warning**
-> I won't be maintainging this library. I thought I'd write some tests and be done with it but to get the kinds of meaningful tests and *generic-ness* out of the library that I want, I'd be reinventing the wheel. There are already functional libraries that are much more stable/flexible/well-tested for the kinds of tasks that I'd want to do with `Vextreme`. If you're looking for an alternative, try [ramdajs](https://ramdajs.com/).
+> I won't be maintaining this library. I thought I'd write some tests and be done with it but in order to get the kinds of meaningful tests and *generic-ness* out of the library that I want, I'd be reinventing the wheel. There are already functional libraries that are much more stable/flexible/well-tested for the kinds of tasks that I'd want to do with `Vextreme`. If you're looking for an alternative, try [ramdajs](https://ramdajs.com/).
 
 Type-safe functions for 3-dimensional vectors.
 
